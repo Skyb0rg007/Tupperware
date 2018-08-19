@@ -1,0 +1,5 @@
+.bash_history
+.*.swp
+setup.sh
+*.o
+tmp/*

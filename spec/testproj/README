@@ -1,0 +1,95 @@
+
+Skye Soss
+
+Comp 15 Project 1
+
+Data Structures:
+
+BinaryTree.h:
+    Binary Tree
+        - Stores <TreeItem>s in a Binary Tree
+        - Uses a pointer to the root node as storage
+        - The class methods are recursive methods on this root
+    
+    FullTree and EmptyTree
+        - Extend the exception class
+        - Used to ensure that some methods cannot be called on invalid trees
+
+BinarySearchTree.h:
+    Binary Search Tree
+        - Extends the Binary Tree class
+        - Also inserts items in the correct location
+            so that each left node is less than the parent 
+            and each right node is greater than the parent
+        - Has all of the same methods as a Binary Tree
+
+Survivor.h:
+    Tree Item / Survivor
+        - The two names are synonymous: typedef
+        - Contain data about the person (the survivor)
+        - The class has instances for common comparison operators
+        - Also contains three constructors, each taking a different number of
+            the private datapoints as initializers
+
+Tree.h:
+    Binary Node 
+        - Struct wrapper to turn the Tree Item into a Node
+        - Contains pointers to more nodes
+        - Also has a TreeItem as the info section
+        - The pointers are NULL if the Node has no children
+
+(Queue.h was not used by me)
+
+survivor-driver.cpp:
+    1. Initialize the file handlers infile1 and infile2
+        - Set a random seed, and use rand() to choose whether
+            file1 or file2 will be each of the text files (as a string)
+        - open the file handlers infile1 and infile2 using the corresponding
+            strings (the string assignment was random, so 
+            the handlers are random too
+        - check to ensure that the files opened correctly, exiting if not
+
+    2. Load the files contents into bst and bt
+        - the generate_next_survivor method returns a boolean, signalling 
+            whether the operation was successful
+        - this means call that method, and as long as it returns true,
+            add it to the binary tree
+        - I used an empty for loop, declaring the Survivor in
+            the first section, generating it in the second, and
+            finally adding it in the third. This matches our goal
+            perfectly.
+        - close the file handlers once this is done
+    3. Round 1 winner
+        - count the leaves on each tree, and output the corresponding
+            message
+        - the winner is now copied into a Binary Tree for future reference
+            * The BinarySearchTree's special features are for the insertion,
+                not deletion, of nodes, so this cast means nothing
+    4. Round 2
+        - While loop as long as there is not a winner
+            (there are more than one survivors in the tree)
+            * Calculate average
+            * Calculate the leftmost and rightmost's difference
+                from the average
+            * remove the farthest from the average
+            * Output a corresponding messsage
+        - Once there is only one item, that is the winner
+            * Output the correct message
+ 
+
+Everything should be implemented!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
