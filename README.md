@@ -112,4 +112,4 @@ C++ is nice, but developing C++ on Windows is impossibly complex.
 
 Java, C#, and Python are nice, but they all need runtimes/interpreters
 
-Lua also needs an interpreter, but because it's size is so small, it can be inbedded into one executable easily
+Lua also needs an interpreter, but because it's size is so small, it can be inbedded into one executable easily through ```luapak```
